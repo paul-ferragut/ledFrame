@@ -1,0 +1,20 @@
+<group>
+    <fill>1</fill>
+    <radius>220.25</radius>
+    <center>512, 384</center>
+    <color>100, 100, 140, 255</color>
+    <circle_res>5</circle_res>
+    <screen_size>1024x768</screen_size>
+<group/>
+<control>
+		<subSectionScale>43.4314</subSectionScale>
+		<mode>1</mode>
+		<UnknownName>0</UnknownName>
+		<black>35</black>
+		<white>193</white>
+		<gamma>1.9062</gamma>
+		<use_Shader>1</use_Shader>
+		<face_Margin>0.2377</face_Margin>
+		<alpha_Shader>255</alpha_Shader>
+	</control>
+</group>

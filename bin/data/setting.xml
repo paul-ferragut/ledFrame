@@ -1,0 +1,12 @@
+<control>
+	<subSectionScale>100</subSectionScale>
+	<mode>0</mode>
+	<UnknownName>1</UnknownName>
+	<black>20</black>
+	<white>90</white>
+	<gamma>9</gamma>
+	<use_Shader>0</use_Shader>
+	<face_Margin>0.2</face_Margin>
+<control/>
+<alpha_Shader>255</alpha_Shader>
+</control>
