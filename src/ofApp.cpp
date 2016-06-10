@@ -70,13 +70,20 @@ void ofApp::setup()
 	gui.add(gamma.setup("gamma", 9.0, 0.01, 9.99));
 	gui.add(useShader.setup("use Shader",false));
 	gui.add(faceMargin.setup("face Margin", 0.2, 0.01, 1.00));
-	gui.add(alphaShader.setup("alpha Shader", 1, 0, 255));
+	gui.add(alphaShader.setup("alpha Shader", 1, 0, 1.0));
+
+
+	
+
+
 
 	gui.loadFromFile("settings.xml");
-	//
+
+
+
 	ofSetFrameRate(30);
 	smoothFinder.set(0, 0, ofGetWidth() / 2, ofGetHeight() / 2);
-	shader.load("noise");
+	shader.load("contrast");
 	cout << "load" << endl;
 }
 
@@ -308,21 +315,34 @@ void ofApp::draw()
 				ofSetColor(255, 255, 255,255);
 				image.drawSubsection(rect[FILTER1].x, rect[FILTER1].y, smoothFinder.width, smoothFinder.height, smoothFinder.x, smoothFinder.y);
 				float fMargin = smoothFinder.width*faceMargin;
-			//fbo.begin();
-				ofEnableAlphaBlending();
-				ofSetColor(255,255,255, 255);
+			//fbo.begin();	
+	
+				ofEnableAlphaBlending();	
+			//	ofEnableBlendMode(OF_BLEND);
+
+				image.drawSubsection(margin + rect[FILTER2].x, margin + rect[FILTER2].y, panelWIDTH, panelWIDTH, smoothFinder.x - fMargin, smoothFinder.y - fMargin, smoothFinder.width + (fMargin * 2), smoothFinder.height + (fMargin * 2));
+		
+		
+				ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
+				
 				if (useShader){
 				shader.begin();
+
+
 				shader.setUniform1f("inGamma", gamma);
 				shader.setUniform1i("inBlack", black);
 				shader.setUniform1i("inWhite", white);
+				shader.setUniform1f("alpha", alphaShader);
 				image.drawSubsection(margin + rect[FILTER2].x, margin + rect[FILTER2].y, panelWIDTH, panelWIDTH, smoothFinder.x - fMargin, smoothFinder.y - fMargin, smoothFinder.width + (fMargin * 2), smoothFinder.height + (fMargin * 2));
 				shader.end();
 				}		
-				
-				ofSetColor(255, 255, 255, alphaShader);
-				image.drawSubsection(margin + rect[FILTER2].x, margin + rect[FILTER2].y, panelWIDTH, panelWIDTH, smoothFinder.x - fMargin, smoothFinder.y - fMargin, smoothFinder.width + (fMargin * 2), smoothFinder.height + (fMargin * 2));
-			
+
+
+
+
+
+				ofDisableBlendMode();
+		
 			}
 		
 

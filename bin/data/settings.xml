@@ -7,14 +7,14 @@
     <screen_size>1024x768</screen_size>
 <group/>
 <control>
-		<subSectionScale>43.4314</subSectionScale>
+		<subSectionScale>94.8815</subSectionScale>
 		<mode>1</mode>
 		<UnknownName>0</UnknownName>
-		<black>35</black>
-		<white>193</white>
-		<gamma>1.9062</gamma>
+		<black>160</black>
+		<white>205</white>
+		<gamma>8.8423</gamma>
 		<use_Shader>1</use_Shader>
-		<face_Margin>0.2377</face_Margin>
-		<alpha_Shader>255</alpha_Shader>
+		<face_Margin>0.2674</face_Margin>
+		<alpha_Shader>0.185</alpha_Shader>
 	</control>
 </group>

@@ -76,7 +76,7 @@ public:
 	ofxFloatSlider gamma;
 	ofxIntSlider white;
 	ofxIntSlider    black;
-	ofxIntSlider    alphaShader;
+	ofxFloatSlider    alphaShader;
 	ofxFloatSlider    faceMargin;
 	ofxToggle useShader;
 	ofxToggle stayInvisible;

@@ -6,6 +6,10 @@ uniform sampler2DRect tex0;     // base image to render
    uniform int inBlack;
    uniform float inGamma;
    uniform int inWhite;
+   uniform float alpha;
+
+
+
 void main (){
 
     // Original pixel color
@@ -23,13 +27,11 @@ void main (){
    // gl_FragColor = vec4( map.rgb, src.a );
 
 
-
-
        //float4 inPixel = tex2D(texture, uv);
-   vec4 color =  vec4(vec3(
+    vec4 color =  vec4(vec3(
     pow(((src.r * 255.0) - float(inBlack)) / ( float(inWhite) -  float(inBlack)), inGamma)  / 255.0,
     pow(((src.g * 255.0) - float(inBlack)) / ( float(inWhite) -  float(inBlack)), inGamma)  / 255.0,
-    pow(((src.b * 255.0) - float(inBlack)) / ( float(inWhite) -  float(inBlack)), inGamma)  / 255.0),1.0);
+    pow(((src.b * 255.0) - float(inBlack)) / ( float(inWhite) -  float(inBlack)), inGamma)  / 255.0),alpha);
 
 
 
