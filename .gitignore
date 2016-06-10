@@ -45,3 +45,26 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.suo
+bin/data/fadecandy-master
+
+
+*.obj
+obj/Debug/ledFrame2.log
+*.tlog
+*.log
+obj/Release/vc110.pdb
+*.cache
+obj/Debug/vc110.idb
+*.exe
+bin/ledFrame2_debug.ilk
+*.dll
+bin/ledFrame2_debug.exp
+*.pdb
+*.exp
+bin/ledFrame2.lib
+*.lib
+*.lastbuildstate
+*.opensdf
+*.sdf
+*.res
